@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
@@ -6,10 +6,12 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
 }
-.container {
 
+.container {
+    width: 100%;
 }
 
+/* --- Coluna de Informações (Esquerda) --- */
 .information-column {
     padding: 40px;
     background-color: black;
@@ -24,11 +26,12 @@
 }
 
 .information-column img {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     border: 1px solid rgb(12, 255, 12);
     margin-bottom: 18px;
+    object-fit: cover;
 }
 
 .information-column h3 {
@@ -41,16 +44,16 @@
 }
 
 .information-column li {
-text-align: left;
-margin: 10px 0;
+    text-align: left;
+    margin: 10px 0;
 }
 
-.contat-description a {
+.contact-description a {
     text-decoration: none;
     color: white;
 }
 
-.contat-description i {
+.contact-description i {
     color: rgb(12, 255, 12);
     margin-right: 10px;
 }
@@ -62,37 +65,41 @@ margin: 10px 0;
 .training-description h4 {
     text-align: left;
     margin-top: 20px;
+    font-size: 16px;
 }
 
 .training-description h5 {
     text-align: left;
     margin-top: 10px;
     color: rgb(12, 255, 12);
-
 }
 
 .training-description p {
     font-style: oblique;
-    font-size: 16px;
+    font-size: 14px;
 }
 
+/* Barras de Idiomas */
 .language-description .percent {
     height: 6px;
-    background-color: green;
+    background-color: #1a4d1a;
     margin-top: 5px;
-    width: 205px;
+    width: 100%;
+    max-width: 205px;
 }
 
 .language-description .percent div {
     height: 6px;
     background-color: rgb(12, 255, 12);
+    width: 100%; /* Português nativo como padrão */
 }
 
 .language-description .percent.english div {
-    width: 5%;
-    background-color: rgb(12, 255, 12);
+    width: 5%; /* Nível de inglês ajustável */
 }
 
+
+/* --- Coluna de Experiências (Direita) --- */
 .experiences-column {
     padding: 40px;
     background-color: white;
@@ -100,40 +107,39 @@ margin: 10px 0;
 }
 
 .experiences-column section {
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .experiences-column h2 {
     margin-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+.experiences-column h3 {
+    margin-top: 10px;
+}
+
+.experiences-column p {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: justify;
 }
 
 .experiences-column .experiences {
-    margin-bottom: 14px;
+    margin-bottom: 20px;
 }
 
 .experiences-column a {
-    text-decoration: none;
     text-decoration: underline;
     color: black;
+    font-weight: 600;
 }
 
 .experiences-column .last-date {
     text-align: right;
-}
-
-@media (min-width: 992px) {
-    .container {
-        display: flex;
-    }
-
-    .information-column img {
-        width: 200px;
-        height: 200px;
-    }
-
-    .experiences-column .experiences {
-        display: flex;
-    }
+    font-size: 12px;
+    color: #666;
 
     .experience-date {
         width: 300px;
